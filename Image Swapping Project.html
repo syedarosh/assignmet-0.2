@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///C:/Users/mm%20com/Downloads/js%20file/assignment/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Swapping Project</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #080830;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #11114d;
+            padding: 20px;
+            border-radius: 15px;
+            width: 250px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 25px;
+            background-color: aqua;
+            color: #080830;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Image Swapping</h1>
+
+    <div class="container">
+
+        <!-- Image 1 -->
+        <div class="card">
+            <img id="image1" src="./Image Swapping Project_files/cars-8891625_640.jpg" alt="Image 1">
+
+            <button onclick="swapPic('image1', 'images/image2.jpg')">
+                Button 1
+            </button>
+        </div>
+
+
+        <!-- Image 2 -->
+        <div class="card">
+            <img id="image2" src="./Image Swapping Project_files/every-detail-of-a-sleek-modern-car-captured-in-close-up-photo.jpg" alt="Image 2">
+
+            <button onclick="swapPic('image2', 'images/image3.jpg')">
+                Button 2
+            </button>
+        </div>
+
+
+        <!-- Image 3 -->
+        <div class="card">
+            <img id="image3" src="./Image Swapping Project_files/8829c0e55f0522cea7b589fec420db88.avif" alt="Image 3">
+
+            <button onclick="swapPic('image3', 'images/image1.jpg')">
+                Button 3
+            </button>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // ONE reusable function
+        function swapPic(imageId, newImage) {
+
+            document.getElementById(imageId).src = newImage;
+
+        }
+
+    </script>
+
+
+</body></html>
